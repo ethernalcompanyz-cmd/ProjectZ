@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THEORY.IRON // DROP 08 - ARCHIVAL STREETWEAR</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Space Grotesk & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#080808',
+              card: '#121212',
+              surface: '#181818',
+              border: '#262626',
+              accent: '#e6e6e2',
+              concrete: '#888888',
+              highlight: '#ffffff',
+              alert: '#ff3333'
+            }
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            syne: ['Syne', 'sans-serif'],
+            mono: ['Courier New', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Grain Overlay */
+    .bg-grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080808;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e6e6e2;
+    }
+
+    /* Brutalist Crosshair Details */
+    .crosshair-corner {
+      position: relative;
+    }
+    .crosshair-corner::before {
+      content: '+';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      color: #555;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    /* Hide default scrollbars for smooth touch scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-brand-accent font-sans antialiased bg-grain min-h-screen flex flex-col selection:bg-brand-accent selection:text-brand-black relative">
+
+  <!-- ==================== TOP TICKER BANNER ==================== -->
+  <div class="bg-brand-surface border-b border-brand-border py-1.5 px-4 text-[10px] sm:text-xs font-mono uppercase tracking-widest flex justify-between items-center text-brand-concrete overflow-hidden">
+    <div class="flex items-center gap-4 animate-pulse">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>SYSTEM STATUS: OPERATIONAL</span>
+      <span class="hidden md:inline">// DROP 08 LIVE</span>
+    </div>
+    <div class="whitespace-nowrap overflow-hidden">
+      <span class="hidden sm:inline">WORLDWIDE EXPRESS SHIPPING AVAILABLE // </span>
+      <span class="text-brand-highlight font-bold">LIMITED QUANTITIES ONLY</span>
+    </div>
+    <div class="hidden lg:block">
+      <span>KYIV // 50.4501° N, 30.5234° E</span>
+    </div>
+  </div>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-brand-black/80 backdrop-blur-md border-b border-brand-border transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="font-syne text-xl sm:text-2xl font-extrabold tracking-tighter text-brand-highlight group-hover:text-brand-concrete transition-colors">
+          THEORY<span class="text-brand-concrete group-hover:text-brand-highlight">.IRON</span>
+        </span>
+        <span class="text-[9px] font-mono border border-brand-border px-1.5 py-0.5 rounded text-brand-concrete">v8.4</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase">
+        <a href="#shop" class="hover:text-brand-highlight transition-colors py-2 relative group">
+          // SHOP
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-highlight group-hover:w-full transition-all duration-200"></span>
+        </a>
+        <a href="#lookbook" class="hover:text-brand-highlight transition-colors py-2 relative group">
+          // LOOKBOOK
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-highlight group-hover:w-full transition-all duration-200"></span>
+        </a>
+        <a href="#drop-info" class="hover:text-brand-highlight transition-colors py-2 relative group text-brand-highlight">
+          [ DROP 08 ]
+        </a>
+        <a href="#about" class="hover:text-brand-highlight transition-colors py-2 relative group">
+          // MANIFESTO
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-highlight group-hover:w-full transition-all duration-200"></span>
+        </a>
+      </nav>
+
+      <!-- Right Action Controls -->
+      <div class="flex items-center gap-4">
+        <!-- Quick Search Button -->
+        <button id="search-btn" class="p-2 hover:text-brand-highlight transition-colors text-brand-concrete" title="Search Catalog">
+          <i class="fa-solid fa-magnifying-glass text-lg"></i>
+        </button>
+
+        <!-- Cart Button Drawer Trigger -->
+        <button id="open-cart-btn" class="relative bg-brand-surface border border-brand-border hover:border-brand-accent px-3 py-2 flex items-center gap-2 transition-all">
+          <i class="fa-solid fa-bag-shopping text-sm"></i>
+          <span class="text-xs font-mono hidden sm:inline">CART</span>
+          <span id="cart-count-badge" class="bg-brand-highlight text-brand-black text-[10px] font-mono font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-brand-accent hover:text-brand-highlight">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-black border-b border-brand-border px-4 py-6 space-y-4 text-sm font-mono tracking-widest uppercase">
+      <a href="#shop" class="block py-2 border-b border-brand-border/40 hover:text-brand-highlight">// SHOP CATALOG</a>
+      <a href="#lookbook" class="block py-2 border-b border-brand-border/40 hover:text-brand-highlight">// EDITORIAL LOOKBOOK</a>
+      <a href="#drop-info" class="block py-2 border-b border-brand-border/40 text-brand-highlight">[ DROP 08 ARCHIVE ]</a>
+      <a href="#about" class="block py-2 hover:text-brand-highlight">// BRAND MANIFESTO</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative min-h-[85vh] flex items-center border-b border-brand-border overflow-hidden">
+    <!-- Ambient Background Lighting -->
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/60 z-10"></div>
+    
+    <!-- Hero Background Image Container -->
+    <div class="absolute inset-0 opacity-40 mix-blend-luminosity hover:opacity-50 transition-opacity duration-700">
+      <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1600&auto=format&fit=crop" 
+           alt="Streetwear Editorial Background" 
+           class="w-full h-full object-cover object-center scale-105 animate-pulse" style="animation-duration: 8s;">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+        
+        <!-- Main Typography Heading -->
+        <div class="lg:col-span-8 space-y-6">
+          <div class="inline-flex items-center gap-2 border border-brand-border bg-brand-black/70 backdrop-blur px-3 py-1 text-xs font-mono text-brand-concrete">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+            <span>ARCHIVAL COLLECTION DROP 08 // CITY ARMOR</span>
+          </div>
+
+          <h1 class="font-syne text-5xl sm:text-7xl lg:text-9xl font-extrabold uppercase leading-none tracking-tight text-brand-highlight">
+            THEORY<br><span class="text-stroke text-transparent bg-clip-text bg-gradient-to-r from-brand-highlight via-brand-concrete to-brand-surface">.IRON</span>
+          </h1>
+
+          <p class="max-w-xl text-sm sm:text-base font-mono text-brand-concrete leading-relaxed">
+            Architectural streetwear crafted for extreme urban landscapes. Heavyweight raw textiles, structured silhouettes, and modular technical utility.
+          </p>
+
+          <!-- Action Buttons & Drop Countdown -->
+          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#shop" class="bg-brand-highlight hover:bg-white text-brand-black font-bold uppercase tracking-wider px-8 py-4 text-xs font-mono transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-3 group">
+              <span>EXPLORE DROP 08</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            
+            <a href="#lookbook" class="border border-brand-border hover:border-brand-highlight text-brand-accent hover:text-brand-highlight font-mono text-xs px-6 py-4 transition-all text-center">
+              VIEW LOOKBOOK [08]
+            </a>
+          </div>
+        </div>
+
+        <!-- Live Drop Countdown & Technical Card -->
+        <div class="lg:col-span-4 bg-brand-surface/90 border border-brand-border p-6 backdrop-blur space-y-4">
+          <div class="flex justify-between items-center text-xs font-mono text-brand-concrete border-b border-brand-border pb-3">
+            <span>NEXT DROP CLOSE</span>
+            <span class="text-brand-highlight">LIMITED EDITION</span>
+          </div>
+
+          <!-- Timer Clock -->
+          <div id="drop-timer" class="grid grid-cols-4 gap-2 text-center py-2 font-mono">
+            <div class="bg-brand-black border border-brand-border p-2">
+              <span id="timer-days" class="block text-2xl font-bold text-brand-highlight">02</span>
+              <span class="text-[9px] text-brand-concrete">DAYS</span>
+            </div>
+            <div class="bg-brand-black border border-brand-border p-2">
+              <span id="timer-hours" class="block text-2xl font-bold text-brand-highlight">14</span>
+              <span class="text-[9px] text-brand-concrete">HRS</span>
+            </div>
+            <div class="bg-brand-black border border-brand-border p-2">
+              <span id="timer-mins" class="block text-2xl font-bold text-brand-highlight">38</span>
+              <span class="text-[9px] text-brand-concrete">MINS</span>
+            </div>
+            <div class="bg-brand-black border border-brand-border p-2">
+              <span id="timer-secs" class="block text-2xl font-bold text-brand-alert">00</span>
+              <span class="text-[9px] text-brand-concrete">SECS</span>
+            </div>
+          </div>
+
+          <div class="text-[11px] font-mono text-brand-concrete space-y-1 pt-2">
+            <div class="flex justify-between">
+              <span>CADENCE:</span>
+              <span class="text-brand-accent">100 PIECES / SKU</span>
+            </div>
+            <div class="flex justify-between">
+              <span>FABRIC:</span>
+              <span class="text-brand-accent">480 GSM JAPANESE COTTON</span>
+            </div>
+            <div class="flex justify-between">
+              <span>WORLDWIDE:</span>
+              <span class="text-brand-accent">TAXES INCLUDED</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILTER & CATALOG SECTION ==================== -->
+  <section id="shop" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full border-b border-brand-border">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 border-b border-brand-border gap-6">
+      <div>
+        <div class="text-xs font-mono text-brand-concrete tracking-widest uppercase mb-1">// ARCHIVE CATALOG</div>
+        <h2 class="font-syne text-3xl sm:text-5xl font-extrabold text-brand-highlight uppercase tracking-tight">
+          SELECTED APPAREL
+        </h2>
+      </div>
+
+      <!-- Sorting Selector -->
+      <div class="flex items-center gap-3 font-mono text-xs">
+        <span class="text-brand-concrete">SORT BY:</span>
+        <select id="sort-select" class="bg-brand-surface border border-brand-border text-brand-accent px-3 py-2 focus:outline-none focus:border-brand-highlight cursor-pointer">
+          <option value="featured">FEATURED // DEFAULT</option>
+          <option value="price-low">PRICE: LOW TO HIGH</option>
+          <option value="price-high">PRICE: HIGH TO LOW</option>
+          <option value="newest">NEWEST ARRIVALS</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Category Filter Controls -->
+    <div class="flex flex-wrap gap-2 mb-10 font-mono text-xs uppercase">
+      <button class="filter-btn active bg-brand-highlight text-brand-black px-4 py-2 border border-brand-highlight transition-all" data-category="all">
+        ALL PRODUCTS [8]
+      </button>
+      <button class="filter-btn bg-brand-surface text-brand-concrete hover:text-brand-accent px-4 py-2 border border-brand-border hover:border-brand-concrete transition-all" data-category="outerwear">
+        OUTERWEAR
+      </button>
+      <button class="filter-btn bg-brand-surface text-brand-concrete hover:text-brand-accent px-4 py-2 border border-brand-border hover:border-brand-concrete transition-all" data-category="hoodies">
+        HOODIES & SWEATS
+      </button>
+      <button class="filter-btn bg-brand-surface text-brand-concrete hover:text-brand-accent px-4 py-2 border border-brand-border hover:border-brand-concrete transition-all" data-category="tees">
+        TEES & TOPS
+      </button>
+      <button class="filter-btn bg-brand-surface text-brand-concrete hover:text-brand-accent px-4 py-2 border border-brand-border hover:border-brand-concrete transition-all" data-category="footwear">
+        FOOTWEAR
+      </button>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Products dynamically rendered via JavaScript -->
+    </div>
+  </section>
+
+  <!-- ==================== LOOKBOOK EDITORIAL SECTION ==================== -->
+  <section id="lookbook" class="py-16 sm:py-24 border-b border-brand-border bg-brand-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-end mb-10">
+        <div>
+          <span class="text-xs font-mono text-brand-concrete tracking-widest">// ARCHIVAL GALLERY</span>
+          <h2 class="font-syne text-3xl sm:text-5xl font-extrabold text-brand-highlight uppercase">
+            EDITORIAL DROP 08
+          </h2>
+        </div>
+        <div class="hidden sm:block font-mono text-xs text-brand-concrete">
+          SWIPE / DRAG TO EXPLORE &rarr;
+        </div>
+      </div>
+
+      <!-- Scrollable Horizontal Gallery -->
+      <div class="flex gap-6 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory">
+        
+        <!-- Lookbook Item 1 -->
+        <div class="min-w-[280px] sm:min-w-[380px] snap-start bg-brand-surface border border-brand-border relative group overflow-hidden">
+          <div class="h-[480px] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" 
+                 alt="Lookbook 01" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-4 border-t border-brand-border font-mono text-xs flex justify-between items-center">
+            <span>LOOK 01 // OVERSIZED PARKA</span>
+            <span class="text-brand-concrete">KYIV ARCHIVE</span>
+          </div>
+        </div>
+
+        <!-- Lookbook Item 2 -->
+        <div class="min-w-[280px] sm:min-w-[380px] snap-start bg-brand-surface border border-brand-border relative group overflow-hidden">
+          <div class="h-[480px] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop" 
+                 alt="Lookbook 02" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-4 border-t border-brand-border font-mono text-xs flex justify-between items-center">
+            <span>LOOK 02 // CARGO TECHNICAL</span>
+            <span class="text-brand-concrete">URBAN UTILITY</span>
+          </div>
+        </div>
+
+        <!-- Lookbook Item 3 -->
+        <div class="min-w-[280px] sm:min-w-[380px] snap-start bg-brand-surface border border-brand-border relative group overflow-hidden">
+          <div class="h-[480px] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800&auto=format&fit=crop" 
+                 alt="Lookbook 03" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-4 border-t border-brand-border font-mono text-xs flex justify-between items-center">
+            <span>LOOK 03 // HEAVY HOODIE</span>
+            <span class="text-brand-concrete">MONOCHROME</span>
+          </div>
+        </div>
+
+        <!-- Lookbook Item 4 -->
+        <div class="min-w-[280px] sm:min-w-[380px] snap-start bg-brand-surface border border-brand-border relative group overflow-hidden">
+          <div class="h-[480px] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop" 
+                 alt="Lookbook 04" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-4 border-t border-brand-border font-mono text-xs flex justify-between items-center">
+            <span>LOOK 04 // BOOTS & ACCESSORIES</span>
+            <span class="text-brand-concrete">TACTICAL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BRAND MANIFESTO SECTION ==================== -->
+  <section id="about" class="py-20 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div class="text-xs font-mono text-brand-concrete tracking-widest">// BRAND MANIFESTO</div>
+          <h2 class="font-syne text-3xl sm:text-5xl font-extrabold text-brand-highlight uppercase leading-tight">
+            NOT JUST CLOTHING. A LIVING ARCHIVE OF SUBCULTURE.
+          </h2>
+          <p class="font-mono text-xs sm:text-sm text-brand-concrete leading-relaxed">
+            THEORY.IRON operates at the intersection of industrial architecture and utilitarian garment engineering. Every drop is produced in strictly limited runs to eliminate waste and uphold uncompromising craftsmanship.
+          </p>
+          <div class="grid grid-cols-2 gap-4 font-mono text-xs pt-4 border-t border-brand-border">
+            <div>
+              <span class="block text-brand-highlight font-bold text-base">480+ GSM</span>
+              <span class="text-brand-concrete">Custom Cotton Fleece</span>
+            </div>
+            <div>
+              <span class="block text-brand-highlight font-bold text-base">0% PLASTIC</span>
+              <span class="text-brand-concrete">Eco-Conscious Packaging</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6 border border-brand-border p-2 bg-brand-surface">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop" 
+               alt="Atelier Showcase" class="w-full h-[350px] sm:h-[450px] object-cover grayscale">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-brand-black text-brand-concrete font-mono text-xs border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="space-y-4">
+          <div class="font-syne text-xl text-brand-highlight font-bold tracking-tight">THEORY.IRON</div>
+          <p class="text-[11px] leading-relaxed">
+            Independent streetwear studio. High-specification garments designed for modern urban environments.
+          </p>
+          <div class="text-[10px] text-brand-concrete">
+            © 2026 THEORY.IRON ALL RIGHTS RESERVED.
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-2">
+          <div class="text-brand-highlight font-bold mb-3">// NAVIGATION</div>
+          <a href="#shop" class="block hover:text-brand-highlight">CATALOG DROP 08</a>
+          <a href="#lookbook" class="block hover:text-brand-highlight">EDITORIAL GALLERY</a>
+          <a href="#about" class="block hover:text-brand-highlight">BRAND MANIFESTO</a>
+          <button id="open-size-guide-footer" class="block hover:text-brand-highlight text-left">SIZE & FIT GUIDE</button>
+        </div>
+
+        <!-- Col 3: Customer Care -->
+        <div class="space-y-2">
+          <div class="text-brand-highlight font-bold mb-3">// CUSTOMER CARE</div>
+          <span class="block text-brand-concrete">WHATSAPP: +62 812-3456-7890</span>
+          <span class="block text-brand-concrete">EMAIL: ORDERS@THEORYIRON.COM</span>
+          <span class="block text-brand-concrete">LOCATION: JAKARTA // KYIV</span>
+          <span class="block text-brand-concrete">STATUS: ACCEPTING ORDERS</span>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="space-y-3">
+          <div class="text-brand-highlight font-bold">// JOIN DROP NOTIFICATIONS</div>
+          <p class="text-[11px]">Receive direct SMS / Email alerts before public release.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <input type="email" required placeholder="ENTER YOUR EMAIL..." 
+                   class="w-full bg-brand-surface border border-brand-border text-brand-accent px-3 py-2 text-xs focus:outline-none focus:border-brand-highlight">
+            <button type="submit" class="w-full bg-brand-accent hover:bg-white text-brand-black font-bold py-2 transition-colors">
+              SUBSCRIBE TO DROP ALERTS
+            </button>
+          </form>
+          <div id="newsletter-feedback" class="hidden text-emerald-400 text-[10px]">
+            ✓ YOU ARE ON THE PRIVATE DROP LIST.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-brand-border flex flex-col sm:flex-row justify-between items-center text-[10px] gap-4">
+        <div>DESIGNED FOR EXTREME URBAN CONDITIONS</div>
+        <div>SERVER TIME: <span id="server-time">10:32:00 UTC</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS & DRAWERS ==================== -->
+
+  <!-- 1. CART SLIDE-OUT DRAWER -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300">
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-brand-surface border-l border-brand-border p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+      
+      <!-- Drawer Header -->
+      <div class="flex justify-between items-center pb-4 border-b border-brand-border font-mono">
+        <div class="flex items-center gap-2">
+          <span class="text-brand-highlight font-bold text-sm">// YOUR BAG</span>
+          <span id="cart-items-count-text" class="text-xs text-brand-concrete">(0 ITEMS)</span>
+        </div>
+        <button id="close-cart-btn" class="text-brand-concrete hover:text-brand-highlight text-xl p-2">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Drawer Items Container -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto py-4 space-y-4 my-2">
+        <!-- Rendered dynamically -->
+        <div id="empty-cart-msg" class="h-full flex flex-col items-center justify-center text-center font-mono text-brand-concrete text-xs p-8 space-y-3">
+          <i class="fa-solid fa-bag-shopping text-4xl opacity-30"></i>
+          <p>YOUR SHOPPING BAG IS CURRENTLY EMPTY.</p>
+          <a href="#shop" onclick="closeCart()" class="text-brand-highlight border-b border-brand-highlight pb-0.5 mt-2">BROWSE DROP 08</a>
+        </div>
+      </div>
+
+      <!-- Drawer Footer / Checkout -->
+      <div class="pt-4 border-t border-brand-border font-mono space-y-3">
+        <div class="flex justify-between text-xs text-brand-concrete">
+          <span>SUBTOTAL:</span>
+          <span id="cart-subtotal" class="text-brand-highlight font-bold">IDR 0</span>
+        </div>
+        <div class="flex justify-between text-[11px] text-brand-concrete">
+          <span>ESTIMATED TAX & SHIPPING:</span>
+          <span class="text-emerald-400">CALCULATED AT CHECKOUT</span>
+        </div>
+        
+        <!-- Direct WhatsApp Checkout Button -->
+        <button id="whatsapp-checkout-btn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors shadow-lg">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>CHECKOUT VIA WHATSAPP</span>
+        </button>
+        
+        <p class="text-[9px] text-center text-brand-concrete uppercase">
+          * Secure direct order processing via WhatsApp Admin.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. QUICK VIEW PRODUCT MODAL -->
+  <div id="quickview-modal-overlay" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+    <div class="bg-brand-surface border border-brand-border max-w-3xl w-full max-h-[90vh] overflow-y-auto relative p-6 font-mono text-xs">
+      <button id="close-quickview-btn" class="absolute top-4 right-4 text-brand-concrete hover:text-brand-highlight text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="quickview-content" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. SIZE & FIT GUIDE MODAL -->
+  <div id="sizeguide-modal-overlay" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+    <div class="bg-brand-surface border border-brand-border max-w-2xl w-full p-6 font-mono text-xs relative space-y-4">
+      <div class="flex justify-between items-center pb-3 border-b border-brand-border">
+        <span class="text-brand-highlight font-bold text-sm">// ARCHIVAL SIZE & FIT MATRIX (CM)</span>
+        <button id="close-sizeguide-btn" class="text-brand-concrete hover:text-brand-highlight text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <p class="text-brand-concrete text-[11px]">
+        All garments feature an oversized boxy streetwear fit. For a true-to-size look, choose one size smaller.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse border border-brand-border text-[11px]">
+          <thead>
+            <tr class="bg-brand-black text-brand-highlight border-b border-brand-border">
+              <th class="p-2 border-r border-brand-border">SIZE</th>
+              <th class="p-2 border-r border-brand-border">CHEST (CM)</th>
+              <th class="p-2 border-r border-brand-border">LENGTH (CM)</th>
+              <th class="p-2 border-r border-brand-border">SHOULDER (CM)</th>
+              <th class="p-2">SLEEVE (CM)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-brand-border text-brand-accent">
+            <tr>
+              <td class="p-2 font-bold border-r border-brand-border">SMALL [S]</td>
+              <td class="p-2 border-r border-brand-border">116</td>
+              <td class="p-2 border-r border-brand-border">70</td>
+              <td class="p-2 border-r border-brand-border">56</td>
+              <td class="p-2">58</td>
+            </tr>
+            <tr class="bg-brand-black/40">
+              <td class="p-2 font-bold border-r border-brand-border">MEDIUM [M]</td>
+              <td class="p-2 border-r border-brand-border">122</td>
+              <td class="p-2 border-r border-brand-border">73</td>
+              <td class="p-2 border-r border-brand-border">59</td>
+              <td class="p-2">60</td>
+            </tr>
+            <tr>
+              <td class="p-2 font-bold border-r border-brand-border">LARGE [L]</td>
+              <td class="p-2 border-r border-brand-border">128</td>
+              <td class="p-2 border-r border-brand-border">76</td>
+              <td class="p-2 border-r border-brand-border">62</td>
+              <td class="p-2">62</td>
+            </tr>
+            <tr class="bg-brand-black/40">
+              <td class="p-2 font-bold border-r border-brand-border">X-LARGE [XL]</td>
+              <td class="p-2 border-r border-brand-border">134</td>
+              <td class="p-2 border-r border-brand-border">79</td>
+              <td class="p-2 border-r border-brand-border">65</td>
+              <td class="p-2">64</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pt-2 text-[10px] text-brand-concrete flex justify-between">
+        <span>* Measured on flat garment surface.</span>
+        <span>Model in lookbook is 185cm wearing size L.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // WhatsApp Phone Number (Configurable for Store Admin)
+    const WHATSAPP_ADMIN_NUMBER = "6281234567890";
+
+    // Sample Streetwear Product Database
+    const products = [
+      {
+        id: "prod-1",
+        sku: "TI-08-JKT01",
+        name: "STRUCTURED COLLAPSE BLAZER JACKET",
+        category: "outerwear",
+        price: 3450000,
+        formattedPrice: "IDR 3,450,000",
+        badge: "LIMITED // 50 PCS",
+        imagePrimary: "https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop",
+        colors: ["Jet Black", "Concrete Gray"],
+        sizes: ["S", "M", "L", "XL"],
+        description: "Heavyweight structured tactical jacket with modular pocketing and double-bonded lining. Weatherproof finish."
+      },
+      {
+        id: "prod-2",
+        sku: "TI-08-HD02",
+        name: "HEAVYWEIGHT ARCHIVAL HOODIE 480GSM",
+        category: "hoodies",
+        price: 1850000,
+        formattedPrice: "IDR 1,850,000",
+        badge: "BESTSELLER",
+        imagePrimary: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=800&auto=format&fit=crop",
+        colors: ["Jet Black", "Bone White"],
+        sizes: ["S", "M", "L", "XL"],
+        description: "Custom-milled 480 GSM organic french terry cotton hoodie. Deep hood profile and double-needle stitching throughout."
+      },
+      {
+        id: "prod-3",
+        sku: "TI-08-TEE03",
+        name: "RAW EDGE GRAPHIC BOX TEE",
+        category: "tees",
+        price: 850000,
+        formattedPrice: "IDR 850,000",
+        badge: "NEW DROP",
+        imagePrimary: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=800&auto=format&fit=crop",
+        colors: ["Jet Black", "Concrete Gray", "Bone White"],
+        sizes: ["S", "M", "L", "XL"],
+        description: "Boxy fit heavy cotton t-shirt with screenprinted architectural typography and raw distressing."
+      },
+      {
+        id: "prod-4",
+        sku: "TI-08-BOT04",
+        name: "CITY ARMOR COMBAT BOOTS",
+        category: "footwear",
+        price: 4200000,
+        formattedPrice: "IDR 4,200,000",
+        badge: "RESTOCK",
+        imagePrimary: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=800&auto=format&fit=crop",
+        colors: ["Jet Black"],
+        sizes: ["40", "41", "42", "43", "44"],
+        description: "Italian calfskin leather high-top tactical combat sneakers with lugged rubber outsole."
+      },
+      {
+        id: "prod-5",
+        sku: "TI-08-JKT05",
+        name: "MODULAR CARGO UTILITY VEST",
+        category: "outerwear",
+        price: 2600000,
+        formattedPrice: "IDR 2,600,000",
+        badge: "LIMITED",
+        imagePrimary: "https://images.unsplash.com/photo-1516257984-b1b4d707412e?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=800&auto=format&fit=crop",
+        colors: ["Jet Black", "Concrete Gray"],
+        sizes: ["S", "M", "L"],
+        description: "Multi-pocket technical vest engineered with high-tenacity nylon ripstop."
+      },
+      {
+        id: "prod-6",
+        sku: "TI-08-HD06",
+        name: "ZIP-THRU TACTICAL FLEECE",
+        category: "hoodies",
+        price: 2100000,
+        formattedPrice: "IDR 2,100,000",
+        badge: "ARCHIVE",
+        imagePrimary: "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=800&auto=format&fit=crop",
+        colors: ["Jet Black"],
+        sizes: ["S", "M", "L", "XL"],
+        description: "Full-zip hoodie featuring heavy hardware zippers and high neck collar construction."
+      },
+      {
+        id: "prod-7",
+        sku: "TI-08-TEE07",
+        name: "OVERSIZED MONOCHROME LONG SLEEVE",
+        category: "tees",
+        price: 1100000,
+        formattedPrice: "IDR 1,100,000",
+        badge: "ESSENTIAL",
+        imagePrimary: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop",
+        colors: ["Bone White", "Jet Black"],
+        sizes: ["S", "M", "L", "XL"],
+        description: "Drop-shoulder long sleeve top crafted from 280 GSM combed jersey cotton."
+      },
+      {
+        id: "prod-8",
+        sku: "TI-08-FT08",
+        name: "URBAN RUNNER TECH SNEAKER",
+        category: "footwear",
+        price: 3800000,
+        formattedPrice: "IDR 3,800,000",
+        badge: "NEW DROP",
+        imagePrimary: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800&auto=format&fit=crop",
+        imageHover: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+        colors: ["Concrete Gray", "Bone White"],
+        sizes: ["40", "41", "42", "43"],
+        description: "Chunky sole silhouette with reflective 3M paneling and quick-lace system."
+      }
+    ];
+
+    // Shopping Cart State Array
+    let cart = [];
+
+    // Selected product state for inline selections
+    const selectedOptions = {};
+
+    // ==================== INITIALIZATION ====================
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts(products);
+      initCountdownTimer();
+      initEventListeners();
+      updateClock();
+      setInterval(updateClock, 1000);
+    });
+
+    // ==================== PRODUCT RENDERER ====================
+    function renderProducts(items) {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = '';
+
+      if (items.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center font-mono text-brand-concrete text-xs">
+            NO ITEMS MATCH THE SELECTED CRITERIA.
+          </div>
+        `;
+        return;
+      }
+
+      items.forEach(prod => {
+        // Initialize default selected size & color
+        if (!selectedOptions[prod.id]) {
+          selectedOptions[prod.id] = {
+            size: prod.sizes[0],
+            color: prod.colors[0]
+          };
+        }
+
+        const card = document.createElement('div');
+        card.className = "bg-brand-surface border border-brand-border group hover:border-brand-highlight transition-all duration-300 flex flex-col justify-between relative";
+        
+        card.innerHTML = `
+          <div>
+            <!-- Badge & SKU -->
+            <div class="p-3 border-b border-brand-border flex justify-between items-center text-[10px] font-mono">
+              <span class="text-brand-concrete">${prod.sku}</span>
+              <span class="text-brand-highlight font-bold border border-brand-border px-1.5 py-0.5 bg-brand-black">${prod.badge}</span>
+            </div>
+
+            <!-- Image Hover Container -->
+            <div class="relative h-72 sm:h-80 overflow-hidden cursor-pointer" onclick="openQuickView('${prod.id}')">
+              <img src="${prod.imagePrimary}" alt="${prod.name}" 
+                   class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:opacity-0">
+              <img src="${prod.imageHover}" alt="${prod.name}" 
+                   class="w-full h-full object-cover transition-all duration-500 absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:scale-105">
+              
+              <button class="absolute bottom-3 right-3 bg-brand-black/90 hover:bg-brand-highlight hover:text-brand-black text-brand-accent px-3 py-1.5 font-mono text-[10px] uppercase border border-brand-border transition-colors">
+                QUICK VIEW +
+              </button>
+            </div>
+
+            <!-- Product Details -->
+            <div class="p-4 space-y-3 font-mono">
+              <h3 class="text-xs font-bold text-brand-highlight tracking-tight line-clamp-1">${prod.name}</h3>
+              <div class="text-sm font-bold text-brand-accent">${prod.formattedPrice}</div>
+
+              <!-- Inline Size Swatches -->
+              <div class="space-y-1">
+                <span class="text-[9px] text-brand-concrete">SELECT SIZE:</span>
+                <div class="flex flex-wrap gap-1">
+                  ${prod.sizes.map(s => `
+                    <button type="button" 
+                            onclick="selectSize('${prod.id}', '${s}', this)"
+                            class="size-btn-${prod.id} text-[10px] border px-2 py-1 transition-all ${s === selectedOptions[prod.id].size ? 'border-brand-highlight bg-brand-highlight text-brand-black font-bold' : 'border-brand-border text-brand-concrete hover:border-brand-concrete'}">
+                      ${s}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add to Cart Action -->
+          <div class="p-4 pt-0 border-t border-brand-border/40 mt-3 font-mono">
+            <button onclick="addToCart('${prod.id}')" 
+                    class="w-full bg-brand-black hover:bg-brand-highlight hover:text-brand-black border border-brand-border hover:border-brand-highlight text-brand-accent font-bold py-2.5 text-xs transition-all uppercase flex items-center justify-center gap-2">
+              <i class="fa-solid fa-plus text-[10px]"></i>
+              <span>ADD TO BAG</span>
+            </button>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
+
+    // Swatch Selector Logic
+    function selectSize(prodId, size, btnEl) {
+      selectedOptions[prodId].size = size;
+      const buttons = document.querySelectorAll(`.size-btn-${prodId}`);
+      buttons.forEach(b => {
+        b.className = `size-btn-${prodId} text-[10px] border px-2 py-1 transition-all border-brand-border text-brand-concrete hover:border-brand-concrete`;
+      });
+      btnEl.className = `size-btn-${prodId} text-[10px] border px-2 py-1 transition-all border-brand-highlight bg-brand-highlight text-brand-black font-bold`;
+    }
+
+    // ==================== CART ACTIONS ====================
+    function addToCart(prodId) {
+      const product = products.find(p => p.id === prodId);
+      const chosenSize = selectedOptions[prodId].size;
+      const chosenColor = selectedOptions[prodId].color;
+
+      const existingIndex = cart.findIndex(item => item.id === prodId && item.size === chosenSize && item.color === chosenColor);
+
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += 1;
+      } else {
+        cart.push({
+          id: product.id,
+          sku: product.sku,
+          name: product.name,
+          price: product.price,
+          formattedPrice: product.formattedPrice,
+          image: product.imagePrimary,
+          size: chosenSize,
+          color: chosenColor,
+          qty: 1
+        });
+      }
+
+      updateCartUI();
+      openCart();
+    }
+
+    function updateCartQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function removeCartItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cart-items-container');
+      const badge = document.getElementById('cart-count-badge');
+      const itemsCountText = document.getElementById('cart-items-count-text');
+      const subtotalEl = document.getElementById('cart-subtotal');
+
+      // Total quantity count
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      badge.textContent = totalQty;
+      itemsCountText.textContent = `(${totalQty} ITEMS)`;
+
+      // Total Price
+      const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      subtotalEl.textContent = `IDR ${totalAmount.toLocaleString('id-ID')}`;
+
+      // Render List
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="h-full flex flex-col items-center justify-center text-center font-mono text-brand-concrete text-xs p-8 space-y-3">
+            <i class="fa-solid fa-bag-shopping text-4xl opacity-30"></i>
+            <p>YOUR SHOPPING BAG IS CURRENTLY EMPTY.</p>
+            <a href="#shop" onclick="closeCart()" class="text-brand-highlight border-b border-brand-highlight pb-0.5 mt-2">BROWSE DROP 08</a>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map((item, idx) => `
+        <div class="flex gap-4 p-3 bg-brand-black border border-brand-border font-mono text-xs relative group">
+          <img src="${item.image}" alt="${item.name}" class="w-16 h-20 object-cover border border-brand-border">
+          
+          <div class="flex-1 space-y-1">
+            <div class="flex justify-between items-start pr-4">
+              <h4 class="font-bold text-brand-highlight line-clamp-1">${item.name}</h4>
+            </div>
+            <div class="text-[10px] text-brand-concrete">
+              SIZE: <span class="text-brand-accent">${item.size}</span> // COLOR: <span class="text-brand-accent">${item.color}</span>
+            </div>
+            <div class="text-brand-accent font-bold pt-1">
+              IDR ${(item.price * item.qty).toLocaleString('id-ID')}
+            </div>
+
+            <!-- Qty Controls -->
+            <div class="flex items-center gap-2 pt-1">
+              <button onclick="updateCartQty(${idx}, -1)" class="w-5 h-5 border border-brand-border flex items-center justify-center hover:bg-brand-surface text-brand-concrete">-</button>
+              <span class="text-xs px-1">${item.qty}</span>
+              <button onclick="updateCartQty(${idx}, 1)" class="w-5 h-5 border border-brand-border flex items-center justify-center hover:bg-brand-surface text-brand-concrete">+</button>
+            </div>
+          </div>
+
+          <!-- Delete Button -->
+          <button onclick="removeCartItem(${idx})" class="absolute top-2 right-2 text-brand-concrete hover:text-brand-alert p-1">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // WhatsApp Direct Checkout Integration
+    function checkoutWhatsApp() {
+      if (cart.length === 0) {
+        alert("Your bag is empty! Please add items before checking out.");
+        return;
+      }
+
+      let message = `*THEORY.IRON - NEW ORDER ARCHIVE DROP 08*\n`;
+      message += `-----------------------------------\n`;
+      
+      cart.forEach((item, index) => {
+        message += `${index + 1}. *${item.name}*\n`;
+        message += `   • SKU: ${item.sku}\n`;
+        message += `   • Size: ${item.size} | Color: ${item.color}\n`;
+        message += `   • Qty: ${item.qty} x IDR ${item.price.toLocaleString('id-ID')}\n\n`;
+      });
+
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      message += `-----------------------------------\n`;
+      message += `*TOTAL AMOUNT: IDR ${subtotal.toLocaleString('id-ID')}*\n\n`;
+      message += `*CUSTOMER SHIPPING DETAILS:*\n`;
+      message += `Name:\n`;
+      message += `Address:\n`;
+      message += `Phone Number:\n\n`;
+      message += `_Please confirm stock & payment instructions._`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${WHATSAPP_ADMIN_NUMBER}?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // ==================== DRAWER & MODAL CONTROLS ====================
+    function openCart() {
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      overlay.classList.remove('hidden');
+      setTimeout(() => {
+        overlay.classList.remove('opacity-0');
+        drawer.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeCart() {
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      drawer.classList.add('translate-x-full');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+      }, 300);
+    }
+
+    function openQuickView(prodId) {
+      const product = products.find(p => p.id === prodId);
+      const modalContent = document.getElementById('quickview-content');
+
+      modalContent.innerHTML = `
+        <div class="space-y-4">
+          <div class="h-80 sm:h-96 border border-brand-border overflow-hidden">
+            <img src="${product.imagePrimary}" alt="${product.name}" class="w-full h-full object-cover">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <img src="${product.imagePrimary}" class="h-20 w-full object-cover border border-brand-border">
+            <img src="${product.imageHover}" class="h-20 w-full object-cover border border-brand-border">
+          </div>
+        </div>
+
+        <div class="space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-[10px] text-brand-concrete flex justify-between">
+              <span>SKU: ${product.sku}</span>
+              <span class="text-brand-highlight">${product.badge}</span>
+            </div>
+            <h2 class="text-lg font-bold text-brand-highlight">${product.name}</h2>
+            <div class="text-xl font-bold text-brand-accent">${product.formattedPrice}</div>
+            <p class="text-brand-concrete text-[11px] leading-relaxed pt-2 border-t border-brand-border">
+              ${product.description}
+            </p>
+
+            <div class="pt-2 space-y-2">
+              <span class="text-[10px] text-brand-concrete block">AVAILABLE SIZES:</span>
+              <div class="flex gap-2">
+                ${product.sizes.map(s => `<span class="border border-brand-border px-3 py-1 text-xs text-brand-accent">${s}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-2 pt-4 border-t border-brand-border">
+            <button onclick="addToCart('${product.id}'); closeQuickView();" 
+                    class="w-full bg-brand-highlight hover:bg-white text-brand-black font-bold py-3 uppercase tracking-wider transition-colors">
+              ADD TO SHOPPING BAG
+            </button>
+            <button onclick="openSizeGuide(); closeQuickView();" class="w-full text-brand-concrete hover:text-brand-highlight text-[10px] text-center pt-1">
+              VIEW SIZE MATRIX & MEASUREMENTS &rarr;
+            </button>
+          </div>
+        </div>
+      `;
+
+      const overlay = document.getElementById('quickview-modal-overlay');
+      overlay.classList.remove('hidden');
+      setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+    }
+
+    function closeQuickView() {
+      const overlay = document.getElementById('quickview-modal-overlay');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => overlay.classList.add('hidden'), 300);
+    }
+
+    function openSizeGuide() {
+      const overlay = document.getElementById('sizeguide-modal-overlay');
+      overlay.classList.remove('hidden');
+      setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+    }
+
+    function closeSizeGuide() {
+      const overlay = document.getElementById('sizeguide-modal-overlay');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => overlay.classList.add('hidden'), 300);
+    }
+
+    // ==================== EVENT LISTENERS & FILTERS ====================
+    function initEventListeners() {
+      // Cart Drawer Trigger
+      document.getElementById('open-cart-btn').addEventListener('click', openCart);
+      document.getElementById('close-cart-btn').addEventListener('click', closeCart);
+      document.getElementById('cart-drawer-overlay').addEventListener('click', (e) => {
+        if (e.target.id === 'cart-drawer-overlay') closeCart();
+      });
+
+      // Quick View Close
+      document.getElementById('close-quickview-btn').addEventListener('click', closeQuickView);
+      document.getElementById('quickview-modal-overlay').addEventListener('click', (e) => {
+        if (e.target.id === 'quickview-modal-overlay') closeQuickView();
+      });
+
+      // Size Guide Modal Trigger
+      document.getElementById('close-sizeguide-btn').addEventListener('click', closeSizeGuide);
+      document.getElementById('open-size-guide-footer').addEventListener('click', openSizeGuide);
+      document.getElementById('sizeguide-modal-overlay').addEventListener('click', (e) => {
+        if (e.target.id === 'sizeguide-modal-overlay') closeSizeGuide();
+      });
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Checkout WhatsApp Listener
+      document.getElementById('whatsapp-checkout-btn').addEventListener('click', checkoutWhatsApp);
+
+      // Newsletter Form Simulation
+      document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('newsletter-feedback').classList.remove('hidden');
+        e.target.reset();
+      });
+
+      // Category Filtering
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.className = "filter-btn bg-brand-surface text-brand-concrete hover:text-brand-accent px-4 py-2 border border-brand-border hover:border-brand-concrete transition-all";
+          });
+          btn.className = "filter-btn active bg-brand-highlight text-brand-black px-4 py-2 border border-brand-highlight transition-all";
+
+          const category = btn.getAttribute('data-category');
+          if (category === 'all') {
+            renderProducts(products);
+          } else {
+            const filtered = products.filter(p => p.category === category);
+            renderProducts(filtered);
+          }
+        });
+      });
+
+      // Sorting Listener
+      document.getElementById('sort-select').addEventListener('change', (e) => {
+        const val = e.target.value;
+        let sorted = [...products];
+
+        if (val === 'price-low') {
+          sorted.sort((a, b) => a.price - b.price);
+        } else if (val === 'price-high') {
+          sorted.sort((a, b) => b.price - a.price);
+        } else if (val === 'newest') {
+          sorted.reverse();
+        }
+        renderProducts(sorted);
+      });
+    }
+
+    // ==================== COUNTDOWN TIMER ====================
+    function initCountdownTimer() {
+      // Set future release date (48 hours from now)
+      const targetDate = new Date(Date.now() + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000));
+
+      function updateTimer() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) return;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / 1000 / 60) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+
+        document.getElementById('timer-days').textContent = days.toString().padStart(2, '0');
+        document.getElementById('timer-hours').textContent = hours.toString().padStart(2, '0');
+        document.getElementById('timer-mins').textContent = mins.toString().padStart(2, '0');
+        document.getElementById('timer-secs').textContent = secs.toString().padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+
+    // Clock display in footer
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('server-time').textContent = now.toUTCString().split(' ')[4] + " UTC";
+    }
+  </script>
+</body>
+</html>
